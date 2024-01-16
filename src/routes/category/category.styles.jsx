@@ -1,15 +1,19 @@
 import styled from "styled-components";
 
+export const SingleCategoryContainer = styled.div`
+    margin-block: 1em;
+    h2{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1em;
+    }
+
+`;
 export const SingleCategory = styled.div`
     display: flex;
     flex-direction: row;
     gap: 1em;
     flex-wrap:wrap;
-    justify-content: space-evenly;
-    margin: 1em;
-    width: 100%;
-`;
-export const TitleContainer = styled.div`
-    margin-top: 1em;
-    margin-left: 1em;
+    justify-content: space-between;
+    margin-inline: 1em;
 `;

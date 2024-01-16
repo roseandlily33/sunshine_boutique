@@ -6,5 +6,6 @@ export const MenuContainer = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    border: 4px solid pink;
 
 `;

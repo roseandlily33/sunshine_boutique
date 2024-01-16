@@ -6,12 +6,12 @@ export const NavBarContainer = styled.nav`
     justify-content: space-between;
     padding: 1em;
     border-bottom: 2px solid ${({theme}) => theme.color.teal};
- h1{
+    h1{
     text-decoration: none;
 }
 `;
 export const NavbarMiddleContainer = styled.div `
-     border: 2.4px solid #7D9191;
+     border: 2.4px solid #859b9b;
      border-radius: ${({theme}) => theme.border.borderRadius};
      padding: 1em;
 `;

@@ -4,11 +4,11 @@ export const ProductContainer = styled.div`
     width: 250px;
     height: auto;
     border-radius: 4px;
+    margin-bottom: 1em;
     img{
         height: 330px;
-    width: 250px;
-    border-radius: 4px;
-
+        width: 250px;
+         border-radius: 4px;
     }
 `;
 export const ButtonContainer = styled.div`

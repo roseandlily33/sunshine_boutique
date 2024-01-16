@@ -6,6 +6,7 @@ export const CategoryContainer = styled.div`
     height: 45%;
     overflow: hidden;
     border-radius: 4px;
+    border: 2px solid green;
     :hover{
     opacity: 0.9;
     cursor: pointer;
