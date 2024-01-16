@@ -85,3 +85,8 @@ hr{
     position: absolute;
     top: 1.4em;
 }
+#heroImage{
+    height: auto;
+    width: 100%;   
+    z-index: 0; 
+}

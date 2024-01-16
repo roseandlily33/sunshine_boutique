@@ -14,6 +14,6 @@ export const SingleCategory = styled.div`
     flex-direction: row;
     gap: 1em;
     flex-wrap:wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-inline: 1em;
 `;

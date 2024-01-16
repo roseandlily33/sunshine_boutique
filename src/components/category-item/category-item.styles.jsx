@@ -1,20 +1,18 @@
 import styled from "styled-components";
 
 export const CategoryContainer = styled.div`
-    border: 5px double ${({theme}) => theme.color.teal};
-    width: 30%;
-    height: 45%;
-    overflow: hidden;
+    width: auto; 
     border-radius: 4px;
-    border: 2px solid green;
+    border: 2px solid orange;
     :hover{
     opacity: 0.9;
     cursor: pointer;
     }
 `;
 export const BackgroundImageContainer = styled.div`
-    height:100%;
-    width: auto;
+    height: 80%;
+    width: 250px;
+    border: 2px solid green;
     :hover{
        transform: scale(1.1);
     transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
@@ -25,6 +23,7 @@ export const BackgroundImageContainer = styled.div`
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    border-radius: 4px;
     }
 
 `;
