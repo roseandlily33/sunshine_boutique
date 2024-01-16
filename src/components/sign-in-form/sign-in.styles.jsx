@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const AuthForm = styled.div`
-     width: 40%;
+     width: 80%;
      h2{
         padding: 0.4em;
      }

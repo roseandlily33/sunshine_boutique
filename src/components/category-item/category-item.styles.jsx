@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const CategoryContainer = styled.div`
     width: auto; 
     border-radius: 4px;
-    border: 2px solid orange;
     :hover{
     opacity: 0.9;
     cursor: pointer;
@@ -12,9 +11,8 @@ export const CategoryContainer = styled.div`
 export const BackgroundImageContainer = styled.div`
     height: 80%;
     width: 250px;
-    border: 2px solid green;
     :hover{
-       transform: scale(1.1);
+    transform: scale(1.1);
     transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
     img{
@@ -25,7 +23,6 @@ export const BackgroundImageContainer = styled.div`
     overflow: hidden;
     border-radius: 4px;
     }
-
 `;
 
 export const CategoryBodyContainer = styled.div`
