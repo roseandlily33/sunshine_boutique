@@ -9,8 +9,6 @@ export const AuthComponent = styled.div`
     @media screen and (max-width: 650px){
         flex-direction: column-reverse;
     }
-   
-
 `;
 
 export const SignContainer = styled.div`

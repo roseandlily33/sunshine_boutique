@@ -7,6 +7,7 @@ import Checkout from './routes/checkout/checkout.component';
 import CategoriesPreview from './routes/categories-preview/categories-preview.component';
 import Category from './routes/category/category.component';
 import { ThemeProvider } from 'styled-components';
+import Footer from './routes/footer/footer.component';
 
 const theme = {
   color: {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/checkout' element={<Checkout />} />
       </Route>
     </Routes>
+    <Footer />
     </ThemeProvider>
   );
 }

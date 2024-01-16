@@ -95,3 +95,8 @@ hr{
     height: auto;
     width: 50%; 
 }
+@media screen and (max-width: 650px) {
+    #leftSideImg{
+        display: none;
+    }
+}
