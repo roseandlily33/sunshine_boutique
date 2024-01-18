@@ -1,4 +1,3 @@
-
 import { useParams } from 'react-router-dom';
 import { useContext, useState, useEffect } from 'react';
 import { CategoriesContext } from '../../contexts/categories.context';
@@ -9,7 +8,9 @@ const Category = () => {
     const {category} = useParams();
     const {categories} = useContext(CategoriesContext);
     const [products, setProducts] = useState(categories[category]);
-
+    // console.log('Category useParams', category);
+    // console.log('Categories useContext', categories);
+    // console.log('Products useState', products)
 
     useEffect(() => {
         setProducts(categories[category]);

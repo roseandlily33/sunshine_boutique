@@ -6,13 +6,14 @@ import CategoryPreview from '../../components/category-preview/category-preview.
 
 const CategoriesPreview = () => {
     const {categories} = useContext(CategoriesContext);
+    console.log('Categories Preview context', categories)
 
     return ( 
         <CategoriesContainer>
            {Object.keys(categories).map((title) => {
         const products = categories[title];
         return (
-          <CategoryPreview key={title} title={title} products={products} />
+          <CategoryPreview  title={title} products={products} />
         );
       })}
         </CategoriesContainer>

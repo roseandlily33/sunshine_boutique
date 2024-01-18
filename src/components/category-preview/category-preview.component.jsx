@@ -3,7 +3,6 @@ import { CategoryPreviewContainer, Preview } from './category-preview.styles';
 import { Link } from 'react-router-dom';
 
 const CategoryPreview = ({title, products}) => {
-
     return (  
         <CategoryPreviewContainer>
             <Link to={title} className="titlePreview">{title.toUpperCase()}</Link>
