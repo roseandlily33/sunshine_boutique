@@ -8,6 +8,7 @@ import CategoriesPreview from './routes/categories-preview/categories-preview.co
 import Category from './routes/category/category.component';
 import { ThemeProvider } from 'styled-components';
 import Footer from './routes/footer/footer.component';
+import Contact from './routes/contact/contact.component';
 
 const theme = {
   color: {
@@ -28,6 +29,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Navbar />}>
         <Route index element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/shop' element={<Shop />}>
           <Route index element={<CategoriesPreview />} />
           <Route path=':category' element={<Category />} />
