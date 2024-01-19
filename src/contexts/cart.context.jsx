@@ -35,11 +35,6 @@ const deleteCartItem = (cartItems, itemToDelete) => {
     return cartItems.filter(item => item.id !== itemToDelete.id);
 }
 
-
-
-
-
-
 export const CartProvider = ({children}) => {
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [cartItems, setCartItems] = useState([]);

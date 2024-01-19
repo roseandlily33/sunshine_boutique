@@ -3,8 +3,6 @@ import { onAuthStateChangedListener, createUserDocumentFromAuth } from "../utils
 
 const userReducer = (state, action) => {
     const {type, payload} = action;
-    console.log('dispatched')
-    console.log('ACTION', action)
     //...state returns all the previous values and doesnt overwrite it except for the value that u specify after that. 
     switch(type){
         case USER_ACTION_TYPES.SET_CURRENT_USER : return {
