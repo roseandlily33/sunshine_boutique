@@ -1,16 +1,18 @@
 import { useParams } from 'react-router-dom';
 import {useState, useEffect } from 'react';
-
+import { useSelector } from 'react-redux';
 import ProductCard from '../../components/product-card/product-card.component';
 import { SingleCategory, SingleCategoryContainer } from './category.styles';
-import { selectCategoriesMap } from '../../store/categories/category.selector';
-import { useSelector } from 'react-redux';
+import { selectCategoriesLoading, selectCategoriesMap } from '../../store/categories/category.selector';
+import Spinner from '../../components/spinner/spinner.component';
+
 
 
 const Category = () => {
     const {category} = useParams();
     const categories = useSelector(selectCategoriesMap);
     const [products, setProducts] = useState(categories[category]);
+    const isLoading = useSelector(selectCategoriesLoading)
     // console.log('Category useParams', category);
     // console.log('Categories useContext', categories);
     // console.log('Products useState', products)
@@ -25,11 +27,12 @@ const Category = () => {
         <>
         <SingleCategoryContainer>
         <h2>{category.toUpperCase()}</h2>
+        {isLoading ? <Spinner /> : 
         <SingleCategory >
             {
                products && products.map((product) => <ProductCard product={product} />)
             }
-        </SingleCategory >
+        </SingleCategory >}
         </SingleCategoryContainer>
         </>
      );
