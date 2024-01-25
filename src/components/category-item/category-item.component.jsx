@@ -1,5 +1,7 @@
 import {CategoryContainer, BackgroundImageContainer, CategoryBodyContainer } from './category-item.styles';
 import { useNavigate } from 'react-router-dom';
+
+
 const CategoryItem = ({category}) => {
     const navigate = useNavigate();
     const navigateHandler = (route) => navigate(route);

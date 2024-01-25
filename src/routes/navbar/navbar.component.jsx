@@ -1,15 +1,16 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
-import { useContext } from "react";
-import { UserContext } from "../../contexts/user.context.jsx";
 import {signOutUser} from '../../utils/firebase.utils.js';
 import CartIcon from "../../components/cart-icon/cart-icon.component.jsx";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component.jsx";
-import { CartContext } from "../../contexts/cart.context.jsx";
 import { NavBarContainer,  NavbarMiddleContainer, NavLinksContainer } from "./navbar.styles.jsx";
-
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from "../../store/user/user.selector.js";
+import { selectIsCartOpen } from "../../store/cart/cart.selector.js";
 const Navbar = () => {
-  const {currentUser } = useContext(UserContext);
-  const {isCartOpen} = useContext(CartContext);
+  const currentUser = useSelector(selectCurrentUser)
+ //const {currentUser } = useContext(UserContext);
+  //const {isCartOpen} = useContext(CartContext);
+  const isCartOpen = useSelector(selectIsCartOpen)
 
   console.log('The current User', currentUser);
     return(

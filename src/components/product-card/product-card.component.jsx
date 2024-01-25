@@ -1,9 +1,17 @@
-import { useContext } from 'react';
-import { CartContext } from '../../contexts/cart.context.jsx';
+// import { useContext } from 'react';
+// import { CartContext } from '../../contexts/cart.context.jsx';
 import { ButtonContainer, ProductContainer } from './product-card.styles.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItemToCart } from '../../store/cart/cart.actions.js';
+import { selectCartItems } from '../../store/cart/cart.selector.js';
 
 const ProductCard = ({product}) => {
-    const {addItemToCart} = useContext(CartContext);
+  //  const {addItemToCart} = useContext(CartContext);
+  const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
+  const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
+ 
+
 
     return (
                   <ProductContainer key={product.id}>
@@ -14,9 +22,7 @@ const ProductCard = ({product}) => {
                     <h4>${product.price}</h4>
                     </div>
                     <div>
-                    <button onClick={() =>{
-                        addItemToCart(product)
-                    }}>Add to Cart</button>
+                    <button onClick={addProductToCart}>Add to Cart</button>
                     </div>
                    </ButtonContainer>
                 </ProductContainer>

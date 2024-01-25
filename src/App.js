@@ -9,6 +9,10 @@ import Category from './routes/category/category.component';
 import { ThemeProvider } from 'styled-components';
 import Footer from './routes/footer/footer.component';
 import Contact from './routes/contact/contact.component';
+import { useEffect } from 'react';
+import { onAuthStateChangedListener, createUserDocumentFromAuth } from "./utils/firebase.utils";
+import { setCurrentUser } from './store/user/user.action';
+import { useDispatch } from 'react-redux';
 
 const theme = {
   color: {
@@ -23,6 +27,19 @@ const theme = {
 };
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log('In app use effect')
+    const unsubscribe =  onAuthStateChangedListener((user) => {
+         if(user){
+            createUserDocumentFromAuth(user);
+         }
+         dispatch(setCurrentUser(user));
+     })
+     return unsubscribe;
+ }, [dispatch])
+
 
   return (
     <ThemeProvider theme={theme}>

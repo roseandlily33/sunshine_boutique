@@ -1,31 +1,28 @@
 import './checkout-item.styles.scss';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectCartItems } from '../../store/cart/cart.selector';
+import { addItemToCart, clearItemFromCart, removeItemFromCart } from '../../store/cart/cart.actions';
 
-const CheckoutItem = ({cartItems, deleteItem, incrementQuanity, decrementItemFromCart}) => {
+const CheckoutItem = ({cartItem}) => {
+    const dispatch = useDispatch();
+    const allItems = useSelector(selectCartItems);
+    const clearItemHandler = () => dispatch(clearItemFromCart(allItems, cartItem));
+    const addItemHandler = () => dispatch(addItemToCart(allItems, cartItem));
+    const removeItemHandler = () => dispatch(removeItemFromCart(allItems, cartItem));
+
     return ( 
         <>
-        <table className='checkout-table'>
-            <thead>
-                <th></th>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th></th>
-            </thead> 
-
-         {cartItems.map(item => (
                 <tbody className="checkout-container">
-                    <td><img src={item.imageUrl} alt={item.name} /></td>
-                    <td>{item.name}</td>
+                    <td><img src={cartItem.imageUrl} alt={cartItem.name} /></td>
+                    <td>{cartItem.name}</td>
                     <td className="quantity-div">
-                    <div className="iconQuantity" onClick={() => decrementItemFromCart(item)}>⬸</div>
-                    <h3>{item.quantity}</h3>
-                    <div className="iconQuantity" onClick={() => incrementQuanity(item)}>⤑</div>
+                    <div className="iconQuantity" onClick={removeItemHandler}>⬸</div>
+                    <h3>{cartItem.quantity}</h3>
+                    <div className="iconQuantity" onClick={addItemHandler}>⤑</div>
                     </td>
-                    <td>{item.price}</td>
-                    <td className="iconQuantity" onClick={() => deleteItem(item)}>X</td>
+                    <td>{cartItem.price}</td>
+                    <td className="iconQuantity" onClick={clearItemHandler}>X</td>
                </tbody>
-            ))}
-            </table>
         </>
      );
 }
