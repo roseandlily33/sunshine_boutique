@@ -3,13 +3,12 @@
 import { useSelector } from "react-redux";
 import { selectCartItems, selectCartTotal } from "../../store/cart/cart.selector";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
-import { TotalContainer, CheckoutContainer } from "./checkout.styles";
-
+import { TotalContainer, CheckoutContainer, BottomDiv } from "./checkout.styles";
+import PaymentForm from "../../components/payment-form/payment-form.component";
 const Checkout = () => {
    // const {cartItems, addItemToCart, decrementItemFromCart, clearCartItem, cartTotal} = useContext(CartContext);
    const cartItems = useSelector(selectCartItems);
    const cartTotal = useSelector(selectCartTotal);
-   console.log('CART TOTAL', cartTotal);
     return ( 
       <>
         <CheckoutContainer>
@@ -28,7 +27,11 @@ const Checkout = () => {
            {cartItems.map((cartItem) => (
             <CheckoutItem cartItem={cartItem}/>
            ))}
+           <BottomDiv>
            <TotalContainer>Total: ${cartTotal}</TotalContainer>
+           <PaymentForm />
+           </BottomDiv>
+          
         </CheckoutContainer>
         </>
      );
