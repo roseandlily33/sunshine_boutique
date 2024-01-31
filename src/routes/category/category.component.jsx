@@ -6,20 +6,13 @@ import { SingleCategory, SingleCategoryContainer } from './category.styles';
 import { selectCategoriesLoading, selectCategoriesMap } from '../../store/categories/category.selector';
 import Spinner from '../../components/spinner/spinner.component';
 
-
-
 const Category = () => {
     const {category} = useParams();
     const categories = useSelector(selectCategoriesMap);
     const [products, setProducts] = useState(categories[category]);
     const isLoading = useSelector(selectCategoriesLoading)
-    // console.log('Category useParams', category);
-    // console.log('Categories useContext', categories);
-    // console.log('Products useState', products)
-    //console.log('Render/Rerendering category component')
 
     useEffect(() => {
-      //  console.log('Effect Fired Category Component to set products')
         setProducts(categories[category]);
     },[categories, category]);
 

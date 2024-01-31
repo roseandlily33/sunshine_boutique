@@ -4,9 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-//import { UserProvider } from './contexts/user.context';
-//import { CategoriesProvider } from './contexts/categories.context';
-//import { CartProvider } from './contexts/cart.context';
 import { Provider } from 'react-redux';
 import { store, persistor } from './store/store';
 import {PersistGate} from 'redux-persist/es/integration/react';
@@ -19,15 +16,9 @@ root.render(
     <Provider store={store}>
       <PersistGate  persistor={persistor}>
     <BrowserRouter>
-   {/* <UserProvider> */}
-   {/* <CategoriesProvider> */}
-    {/* <CartProvider> */}
     <Elements stripe={stripePromise}>
    <App />
    </Elements>
-   {/* </CartProvider> */}
-   {/* </CategoriesProvider> */}
-   {/* </UserProvider> */}
    </BrowserRouter>
    </PersistGate>
    </Provider>

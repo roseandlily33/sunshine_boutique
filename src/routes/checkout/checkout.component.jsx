@@ -1,18 +1,16 @@
-// import { useContext } from "react";
-// import { CartContext } from "../../contexts/cart.context";
 import { useSelector } from "react-redux";
 import { selectCartItems, selectCartTotal } from "../../store/cart/cart.selector";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import { TotalContainer, CheckoutContainer, BottomDiv } from "./checkout.styles";
 import PaymentForm from "../../components/payment-form/payment-form.component";
+
 const Checkout = () => {
-   // const {cartItems, addItemToCart, decrementItemFromCart, clearCartItem, cartTotal} = useContext(CartContext);
    const cartItems = useSelector(selectCartItems);
    const cartTotal = useSelector(selectCartTotal);
     return ( 
       <>
         <CheckoutContainer>
-        
+
          <table className='checkout-table'>
             <thead>
                 <th></th>
@@ -22,8 +20,6 @@ const Checkout = () => {
                 <th></th>
             </thead> 
             </table>
-         
-        
            {cartItems.map((cartItem) => (
             <CheckoutItem cartItem={cartItem}/>
            ))}

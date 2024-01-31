@@ -6,7 +6,7 @@ const CategoryItem = ({category}) => {
     const navigate = useNavigate();
     const navigateHandler = (route) => navigate(route);
     return ( 
-        <CategoryContainer  >
+        <CategoryContainer key={category.id} >
         <BackgroundImageContainer>
         <img src={category.img} alt={category.alt}/>
         </BackgroundImageContainer>

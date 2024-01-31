@@ -2,6 +2,7 @@ import { ContactContainer, ContactInfo, HoursAndAddress } from "./contact.styles
 import contactImage from '../../images/products/product2.jpg';
 import { useState } from "react";
 import FormInput from "../../components/form-input/form-input.component";
+
 const Contact = () => {
     const defaultFormFields = {
         email: '',
@@ -37,7 +38,6 @@ const Contact = () => {
         Hours: <br />
         Monday - Friday: 9 - 6 <br />
         Saturday: 8 - 6 <br />
-
         <address>
             590 Wellington Ave <br />
             Morgan, Arizona P9851

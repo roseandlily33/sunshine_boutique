@@ -11,10 +11,7 @@ const PaymentForm = () => {
     const currentUser = useSelector(selectCurrentUser);
     const [isProcessingPayment, setProcessingPayment]= useState(false);
 
-
-
     const paymentHandler = async(e) => {
-        console.log('Making a payment request')
         e.preventDefault();
         setProcessingPayment(true);
         if(!stripe || !elements){
@@ -40,8 +37,8 @@ const PaymentForm = () => {
         if(paymentResult.error){
             alert("There was an error")
         } else {
-            if(paymentResult.paymentIntent.status == 'succeeded'){
-                alert('Payment Was Sucessful')
+            if(paymentResult.paymentIntent.status === 'succeeded'){
+                alert('Payment Was Sucessful, not actually this is just a test')
             }
         }
     }

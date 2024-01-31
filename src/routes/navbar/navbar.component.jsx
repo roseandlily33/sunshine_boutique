@@ -8,11 +8,7 @@ import { selectCurrentUser } from "../../store/user/user.selector.js";
 import { selectIsCartOpen } from "../../store/cart/cart.selector.js";
 const Navbar = () => {
   const currentUser = useSelector(selectCurrentUser)
- //const {currentUser } = useContext(UserContext);
-  //const {isCartOpen} = useContext(CartContext);
   const isCartOpen = useSelector(selectIsCartOpen)
-
-  console.log('The current User', currentUser);
     return(
      <>
      <NavBarContainer>

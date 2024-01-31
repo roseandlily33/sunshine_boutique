@@ -3,10 +3,8 @@ import { CategoriesContainer } from './categories.styles';
 import CategoryPreview from '../../components/category-preview/category-preview.component';
 import {selectCategoriesMap} from '../../store/categories/category.selector';
 
-
 const CategoriesPreview = () => {
     const categories = useSelector(selectCategoriesMap);
-    console.log('Categories Preview context', categories)
 
     return ( 
         <CategoriesContainer>

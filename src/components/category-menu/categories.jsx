@@ -1,16 +1,16 @@
 import Dress from '../../images/products/product3.jpg';
 import Purse from '../../images/products/product7.jpg';
-import Top from '../../images/products/product8.jpg';
+import Sneaker from '../../images/products/product14.jpg';
+import Men from '../../images/products/product13.jpg';
 import Jacket from '../../images/products/product5.jpg';
-import Bottom from '../../images/products/product6.jpg';
 
 export const categories = [
     {
       id: 1,
-      title: 'Dresses',
+      title: 'Womens',
       img: Dress,
-      alt: 'Shop Dresses',
-      route: 'shop/dresses'
+      alt: 'Shop Womens',
+      route: 'shop/womens'
     },
     {
       id: 2,
@@ -21,23 +21,23 @@ export const categories = [
     },
     {
       id: 3,
-      title: 'Tops',
-      img: Top,
-      alt: 'Shop Tops',
-      route: 'shop/tops'
+      title: 'Mens',
+      img: Men,
+      alt: 'Shop Mens',
+      route: 'shop/mens'
     },
     {
       id: 4,
-      title: 'Bottoms',
-      img: Bottom,
-      alt: 'Shop Bottoms',
-      route: 'shop/bottoms'
+      title: 'Sneakers',
+      img: Sneaker,
+      alt: 'Shop Sneakers',
+      route: 'shop/sneakers'
     },
     {
       id: 5,
       title: 'Accessories',
       img: Purse,
       alt: 'Shop Accessories',
-      route: 'shop/accessories'
+      route: 'shop/hats'
     },
   ];

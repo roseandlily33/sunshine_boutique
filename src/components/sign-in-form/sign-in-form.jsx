@@ -21,7 +21,6 @@ const SignInForm = () => {
             e.preventDefault();
             try{
                 const {user} = await signInAuthUserWithEmailAndPassword(email, password);
-                console.log('Handle submit user', user)
                 setFormFields(defaultFormFields);
             } catch(err){
                 switch(err.code){
