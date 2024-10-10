@@ -16,10 +16,17 @@ import { useDispatch } from 'react-redux';
 
 const theme = {
   color: {
-    black: '#463636',
+    black: '#1f2020',
+    darkGrey: '#779494',
+    mediumGrey: '#8EA7A7',
+    lightGrey: '#98AFAF',
     white: '#ffffff',
-    teal: '#227777',
-    yellow:' #f5ba45'
+    teal: '#014D4E',
+    mediumTeal: '#185D5E',
+    lightTeal: '#2D6C6D',
+    yellow:' #f5ba45',
+    mediumYellow: '#F6C056',
+    lightYellow: '#F7C665'
   },
   border: {
     borderRadius: '4px',
