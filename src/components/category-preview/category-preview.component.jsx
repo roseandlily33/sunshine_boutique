@@ -12,7 +12,7 @@ const CategoryPreview = ({title, products}) => {
         <CategoryPreviewContainer>
            {isLoading ? <Spinner /> :
             <>
-            <Link to={title} className="titlePreview">{title.toUpperCase()}</Link>
+            <Link to={title} className="titlePreview"><h2>{title.toUpperCase()}</h2></Link>
             <Preview>
                 {
                     products.filter((_, idx) => (idx < 4)).map((product) => <ProductCard product={product}/>)

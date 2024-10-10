@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -6,39 +6,63 @@
 }
 :root{
    --headerFont: 'Cinzel Decorative', serif;
-   --mainFont: 'Cormorant Garamond', serif;
-   --black: #463636;
+   --subHeaderFont: "Playfair", serif;
+   --mainFont: "DM Sans", serif;
+   --black: #779494;
+   --darkGrey: #779494;
+   --mediumGrey: #8EA7A7;
+   --lightGrey: #98AFAF;
    --white: #ffffff;
-   --teal: #344343eb;
-   --lightTeal: #779494eb;
+   --teal: #014D4E;
+   --mediumTeal: #185D5E;
+   --lightTeal: #2D6C6D;
    --yellow: #f5ba45;
+   --mediumYellow: #F6C056;
+   --lightYellow: #F7C665;
 }
 body{
-    background-color: #ffffff7d;
+    background-color: var(--white);
+    font-family: var(--mainFont);
+    color: var(--black);
+    font-size: 16px;
 }
 h1{
     font-family: var(--headerFont);
     color: var(--teal);
+    font-size:  2.027rem;
+    font-weight: 500;
 }
 h2{
-    font-family: var(--mainFont);
+    font-family: var(--subHeaderFont);
     color: var(--black);
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.802rem;
+    font-size:  2.027rem;
 }
-h3,h4, h5, h6{
-    font-family: var(--mainFont);
-    color: var(--black);
-    font-weight: 400;
+h3{
+    font-size: 1.602rem;
+    font-weight: 300;
+}
+h4{
+    font-size: 1.424rem;
+    font-weight: 300;
+}
+h5{
+    font-size: 1.266rem;
+    font-weight: 300;
+}
+h6{
+    font-size: 1.125rem;
+    font-weight: 300;
 }
 p{
-    font-family: var(--mainFont);
-    color: var(--black);
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: normal;
 }
 a{
     text-decoration: none;
-    color: var(--black);
-    font-size: 1.25em;
+    font-size: 1.125rem;
+    color: var(--teal);
 }
 a:hover{
     color: var(--yellow);
