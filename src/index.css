@@ -21,6 +21,7 @@
    --mediumYellow: #F6C056;
    --lightYellow: #F7C665;
    --borderRadius: 4px;
+   --boxShadow: 12px 12px 19px 7px var(--lightGrey);
 }
 body{
     background-color: var(--white);
@@ -61,10 +62,11 @@ p{
     font-size: 1rem;
     font-weight: normal;
 }
-a{
+a, label{
     text-decoration: none;
-    font-size: 1.125rem;
+    font-size:  1.424rem;
     color: var(--teal);
+    font-family: var(--subHeaderFont);
 }
 a:hover{
     color: var(--yellow);
@@ -76,6 +78,9 @@ button {
     color: var(--mediumTeal);
     padding: 0.7em 1.7em;
     border-radius: 0.5em;
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    font-weight: bold;
     background: var(--white);
     cursor: pointer;
     border: 2px solid var(--mediumTeal);
@@ -90,6 +95,30 @@ button {
   }
   
   button:active {
+    box-shadow: 4px 4px 12px var(--lightGrey), -4px -4px 12px var(--white);
+  }
+/* Secondary Button */
+.secondaryButton{
+    color: var(--black);
+    padding: 0.7em 1.7em;
+    border-radius: 0.5em;
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    font-weight: bold;
+    background: var(--lightYellow);
+    cursor: pointer;
+    border: 2px solid var(--black);
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px var(--lightGrey), -6px -6px 12px var(--white);
+  }
+  
+  .secondaryButton:hover {
+    background-color: var(--lightYellow);
+
+    border: 1px solid var(--white);
+  }
+  
+.secondaryButton:active {
     box-shadow: 4px 4px 12px var(--lightGrey), -4px -4px 12px var(--white);
   }
 form{

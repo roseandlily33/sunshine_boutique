@@ -40,13 +40,13 @@ const SignInForm = () => {
            <h2>Have an account?</h2>
            <hr />
            <form onSubmit={handleSubmit}>
-             <FormInput label=""
+             <FormInput label="Email"
              type="email" name="email" value={email} onChange={handleChange} placeholder="Email" required/>
-             <FormInput label=""
+             <FormInput label="Password"
              type="password" name="password" value={password} onChange={handleChange} placeholder="Password" required/>
             <ButtonContiner>
             <button type="submit">Sign In</button>
-            <button type="button" buttontype='google' onClick={logGoogleUser}>Sign In With Google</button>
+            <button className="secondaryButton" type="button" buttontype='google' onClick={logGoogleUser}>Sign In With Google</button>
             </ButtonContiner>
         </form>
         </AuthForm>

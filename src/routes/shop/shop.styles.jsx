@@ -5,5 +5,6 @@ export const ShopComponent = styled.div `
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5em;
+    border: 1px solid orange;
 `;
     

@@ -25,10 +25,8 @@ const SignUpForm = () => {
             } 
             try{
                const {user} = await createAuthUserWithEmailAndPassword(email, password);
-               
                 await createUserDocumentFromAuth(user, {displayName});
                 setFormFields(defaultFormFields);
-
             } catch(err){
                 if(err.code === 'auth/email-already-in-use'){
                     alert('Email is already in use')
@@ -42,13 +40,13 @@ const SignUpForm = () => {
             <h2>Don't have an account? </h2>
             <hr />
            <form onSubmit={handleSubmit}>
-            <FormInput label=""
+            <FormInput label="Username"
              type="text" name="displayName" value={displayName} onChange={handleChange} placeholder="Username" required/>
-             <FormInput label=""
+             <FormInput label="Email"
              type="email" name="email" value={email} onChange={handleChange} placeholder="Email" required/>
-             <FormInput label=""
+             <FormInput label="Password"
              type="password" name="password" value={password} onChange={handleChange} placeholder="Password" required/>
-              <FormInput label=""
+              <FormInput label="Confirm Password"
              type="password" name="confirmPassword" value={confirmPassword}  placeholder="Confirm Password" onChange={handleChange} required/>
             <button type="submit">Sign Up</button>
         </form>

@@ -9,6 +9,7 @@ import Category from './routes/category/category.component';
 import { ThemeProvider } from 'styled-components';
 import Footer from './routes/footer/footer.component';
 import Contact from './routes/contact/contact.component';
+import SingleProduct from './routes/single-product/single-product.component';
 import { useEffect } from 'react';
 import { onAuthStateChangedListener, createUserDocumentFromAuth } from "./utils/firebase.utils";
 import { setCurrentUser } from './store/user/user.action';
@@ -19,7 +20,7 @@ const theme = {
     black: '#1f2020',
     darkGrey: '#779494',
     mediumGrey: '#8EA7A7',
-    lightGrey: '#98AFAF',
+    lightGrey: '#F3F2EE',
     white: '#ffffff',
     teal: '#014D4E',
     mediumTeal: '#185D5E',
@@ -30,6 +31,7 @@ const theme = {
   },
   border: {
     borderRadius: '4px',
+    boxShadow: '12px 12px 19px 7px #98AFAF'
   }
 };
 
@@ -56,6 +58,7 @@ function App() {
         <Route path='/shop' element={<Shop />}>
           <Route index element={<CategoriesPreview />} />
           <Route path=':category' element={<Category />} />
+          <Route path='product/:id' element={<SingleProduct />} />
         </Route>
         <Route path='/signin' element={<SignIn />}/>
         <Route path='/checkout' element={<Checkout />} />

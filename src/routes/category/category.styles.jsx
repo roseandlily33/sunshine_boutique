@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SingleCategoryContainer = styled.div`
     margin-block: 1em;
+    border: 5px solid blue;
     h2{
     text-align: center;
     font-weight: bold;
@@ -16,4 +17,5 @@ export const SingleCategory = styled.div`
     flex-wrap:wrap;
     justify-content: space-evenly;
     margin-inline: 1em;
+    border: 5px solid red;
 `;

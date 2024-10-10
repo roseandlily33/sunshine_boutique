@@ -1,10 +1,7 @@
 import styled from "styled-components";
+
 export const AuthForm = styled.div`
      width: 80%;
-     h2{
-        padding: 0.4em;
-     }
-
 `;
 export const ButtonContiner = styled.div`
     display: flex;

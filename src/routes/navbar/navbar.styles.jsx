@@ -8,7 +8,7 @@ export const NavBarContainer = styled.nav`
     border-bottom: 2px solid ${({theme}) => theme.color.teal};
     h1{
     text-decoration: none;
-}
+        }
 `;
 export const NavbarMiddleContainer = styled.div `
      border: 2.4px solid #859b9b;
